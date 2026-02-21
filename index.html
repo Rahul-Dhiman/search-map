@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSINT Search Interface</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>OSINT Search Interface</h1>
+  <button id="themeToggle">Dark Mode</button>
+</header>
+
+<main class="container">
+  <div class="search-card">
+    <input type="text" id="keyword" placeholder="Enter keyword, content title, or creator name">
+
+    <section class="operator-modules">
+      <details open>
+        <summary>Basic Operators</summary>
+        <label><input type="checkbox" id="exactMatch"> Exact Match</label>
+        <label><input type="checkbox" id="maxBreadth"> Max Breadth</label>
+        <label>Exclude Domain: <input type="text" id="excludeDomain" placeholder="example.com"></label>
+      </details>
+
+      <details>
+        <summary>File & Content Discovery</summary>
+        <label><input type="checkbox" id="fileTypes"> File Types (zip, rar, pdf, docx)</label>
+        <label><input type="checkbox" id="forums"> Forums</label>
+        <label><input type="checkbox" id="pasteSites"> Paste Sites</label>
+        <label><input type="checkbox" id="archives"> Archive Sites</label>
+      </details>
+
+      <details>
+        <summary>Advanced Search Settings</summary>
+        <label>Language:
+          <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+          </select>
+        </label>
+        <label>Region:
+          <select id="region">
+            <option value="us">US</option>
+            <option value="uk">UK</option>
+            <option value="in">India</option>
+            <option value="ca">Canada</option>
+          </select>
+        </label>
+        <label>Results:
+          <select id="results">
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </label>
+        <label><input type="checkbox" id="safeSearch"> SafeSearch Off</label>
+      </details>
+    </section>
+
+    <div class="buttons">
+      <button id="searchBtn">Search</button>
+      <button id="copyBtn">Copy Query</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="preview">
+      <h3>Generated Query Preview</h3>
+      <textarea id="queryPreview" readonly></textarea>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
