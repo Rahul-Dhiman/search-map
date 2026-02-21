@@ -1,0 +1,119 @@
+/* Base Mobile-First Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+header button {
+  background: #0056b3;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 10px;
+}
+
+.search-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+input[type="text"], select, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+details {
+  margin-top: 10px;
+}
+
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1 1 48%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.preview textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  resize: none;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Dark Mode */
+.dark-mode body, .dark-mode .search-card {
+  background: #121212;
+  color: #fff;
+}
+
+.dark-mode input, .dark-mode select, .dark-mode textarea {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* Tablet + Desktop */
+@media(min-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    flex: 1 1 30%;
+  }
+
+  .buttons {
+    justify-content: space-between;
+  }
+}
